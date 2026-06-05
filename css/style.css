@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*variables generales (color, tamaños, alturas)*/
+:root{
+    --color-primario: #415a42;
+    --color-secundario: #9ad19c;
+    --texto-color-primario: #ffffff;
+    --texto-color-secundario: #000000;
+    --altura-header: 320px;
+    --fuente-titulos: 'lucida sans', sans-serif;
+}
+body{
+    font-size: 16px;
+}
+
+header{
+    height: var(--altura-header);
+    background-color: var(--color-primario);
+    position: relative;
+}
+
+.degradado{
+    background: linear-gradient(to bottom, transparent, var(--color-primario));
+}
+
+.bienvenida{
+    position: absolute;
+    left: 10%;
+    bottom: 35px;
+    font-family: var(--fuente-titulos);
+    /* 1em equivale al tamaño de la fuente por default en body, que en este caso es 16px, entonces 1em = 16px */
+    color: var(--texto-color-primario);
+}
+
+.buscador{
+    position: absolute;
+    bottom: -25px;
+    left: 10%;
+    height: 50px;
+    width: 80%;
+    /*margin: auto; centra el buscador horizontalmente*/
+    background-color: white;
+}
+
+.cuadrado-boton{
+    height: 50px;
+    width: 50px;
+    background-color: green;
+}
+
+main{
+    min-height: calc(100dvh - var(--altura-header));
+    background-color: var(--color-secundario);
+}
+
+
