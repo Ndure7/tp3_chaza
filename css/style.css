@@ -12,8 +12,15 @@
     --altura-header: 320px;
     --fuente-titulos: 'lucida sans', sans-serif;
 }
-body{
-    font-size: 16px;
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondo-blanco{
+    background-color: white;
 }
 
 header{
@@ -36,13 +43,38 @@ header{
 }
 
 .buscador{
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     bottom: -25px;
     left: 10%;
+    box-shadow: 0 6px 26px -3px rgba(0, 0, 0, 0.5);
+
     height: 50px;
     width: 80%;
     /*margin: auto; centra el buscador horizontalmente*/
     background-color: white;
+}
+
+.buscador input[type="text"]{
+    height: 100%;
+    outline: none;
+    border: none;
+    flex: 1;
+    padding: 1em;
+}
+
+.btn-buscar{
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    height: 50px;
+    width: 50px;
+}
+
+.btn-buscar:hover{
+    background-color: var(--color-secundario);
+    cursor: pointer;
 }
 
 .cuadrado-boton{
@@ -56,4 +88,9 @@ main{
     background-color: var(--color-secundario);
 }
 
+.categorias{
+    background-color: var(--texto-color-primario);
+    height: 100px;
+    padding-top: 25px;
+}
 
