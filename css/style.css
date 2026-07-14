@@ -186,6 +186,25 @@ main{
     border-bottom: 1px solid #e2e6e3;
 }
 
+
+.top-bar2{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 2;
+    padding: 0 1.2em;
+}
+
+.top-bar2 .btn-cerrar{
+    color: white;
+    font-size: 1.3em;
+}
 .top-bar .btn-cerrar{
     position: absolute;
     left: 1em;
