@@ -8,6 +8,7 @@
 :root{
     --color-primario: #293d29;
     --color-secundario: #527e52;
+    --color-acento: #2ecc87;
     --texto-color-primario: #ffffff;
     --texto-color-secundario: #000000;
     --altura-header: 320px;
@@ -122,4 +123,319 @@ main{
     transform: scale(1.05);
     cursor: pointer ;
     border-radius: 3em;
+}
+
+/* ============================
+   LISTADO DE RESTAURANTES 
+============================ */
+
+.titulo-seccion{
+    padding: 0 1em;
+    color: gray;
+    font-size: .9em;
+    margin-bottom: 1em;
+}
+
+.restaurantes{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0 1em 2em;
+}
+
+.card-restaurante{
+    display: flex;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+.card-restaurante img{
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+}
+
+.card-restaurante .info{
+    flex: 1;
+    padding: .8em;
+    position: relative;
+}
+
+.card-restaurante .rating{
+    position: absolute;
+    top: .8em;
+    right: .8em;
+    background-color: var(--color-acento);
+    color: white;
+    font-size: .8em;
+    font-weight: bold;
+    padding: .1em .5em;
+}
+
+/* ============================
+   BARRA SUPERIOR 
+============================ */
+
+.top-bar{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+    border-bottom: 1px solid #e2e6e3;
+}
+
+.top-bar .btn-cerrar{
+    position: absolute;
+    left: 1em;
+    background: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* ============================
+ (DETAILS / MENU / REVIEWS)
+============================ */
+
+.tab-bar{
+    display: flex;
+    background-color: white;
+    border-top: 1px solid #e2e6e3;
+}
+
+.tab-item{
+    flex: 1;
+    text-align: center;
+    padding: 1em 0;
+    font-size: .8em;
+    font-weight: bold;
+    color: gray;
+}
+
+.tab-item.activo{
+    color: var(--color-primario);
+    border-top: 2px solid var(--color-acento);
+}
+
+/* ============================
+   DETALLE DE RESTAURANTE
+============================ */
+
+.hero-restaurante{
+    position: relative;
+}
+
+.hero-restaurante img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-restaurante .rating{
+    position: absolute;
+    bottom: -15px;
+    right: 1em;
+    background-color: var(--color-acento);
+    color: white;
+    font-weight: bold;
+    padding: .4em .8em;
+}
+
+.ficha-restaurante{
+    padding: 2em 1em 1em;
+}
+
+.ficha-restaurante h1{
+    font-family: var(--fuente-titulos);
+    margin-bottom: .3em;
+}
+
+.ficha-restaurante .precio-tipo{
+    color: var(--color-acento);
+    font-weight: bold;
+}
+
+.ficha-restaurante .tipo-comida{
+    color: gray;
+    margin-bottom: 1em;
+}
+
+.datos-rapidos{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1em 0;
+    border-top: 1px solid #e2e6e3;
+    border-bottom: 1px solid #e2e6e3;
+    margin-bottom: 1em;
+}
+
+.datos-rapidos div{
+    flex: 1;
+    font-size: .8em;
+    color: gray;
+}
+
+.datos-rapidos i{
+    display: block;
+    font-size: 1.3em;
+    color: var(--color-acento);
+    margin-bottom: .3em;
+}
+
+.descripcion{
+    color: gray;
+    line-height: 1.5em;
+}
+
+/* ============================
+   MENU (listado de platos)
+============================ */
+
+.categoria-menu{
+    text-align: center;
+    padding: 1em 0;
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-acento);
+    width: fit-content;
+    margin: 0 auto 1em;
+}
+
+.lista-platos{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    padding: 0 1em 2em;
+}
+
+.item-plato{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.item-plato img{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.item-plato .info-plato{
+    flex: 1;
+}
+
+.item-plato p{
+    color: gray;
+    font-size: .85em;
+}
+
+.item-plato .precio-plato{
+    background-color: var(--color-acento);
+    color: white;
+    font-weight: bold;
+    font-size: .85em;
+    padding: .3em .6em;
+}
+
+/* ============================
+   PRODUCTO (detalle de plato)
+============================ */
+
+.hero-producto{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.ficha-producto{
+    padding: 1.5em 1em;
+}
+
+.encabezado-producto{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.precio-producto{
+    background-color: var(--color-acento);
+    color: white;
+    font-weight: bold;
+    padding: .4em .7em;
+    white-space: nowrap;
+}
+
+.nota-pedido{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e2e6e3;
+    padding: .8em 0;
+    outline: none;
+    color: gray;
+    margin: 1.5em 0;
+}
+
+.barra-carrito{
+    display: flex;
+    gap: 1em;
+}
+
+.selector-cantidad{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-acento);
+}
+
+.selector-cantidad button{
+    background: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.selector-cantidad span{
+    color: white;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+.btn-agregar-carrito{
+    flex: 1;
+    background-color: var(--color-acento);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ============================
+   CARRITO
+============================ */
+
+.resumen-carrito{
+    padding: 0 1em 1.5em;
+}
+
+.fila-resumen{
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    padding: .4em 0;
+}
+
+.fila-resumen.total{
+    color: var(--texto-color-secundario);
+    font-weight: bold;
+    font-size: 1.1em;
+    border-top: 1px solid #e2e6e3;
+    margin-top: .5em;
+    padding-top: .8em;
 }
