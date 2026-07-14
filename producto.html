@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oven Roasted Chicken - Producto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="container">
+
+        <img class="hero-producto" src="./img/miga.jpg" alt="Sanguches de Miga">
+
+        <main>
+            <div class="ficha-producto">
+                <div class="encabezado-producto">
+                    <h1>Sanguches de Miga</h1>
+                    <span class="precio-producto">$6.99</span>
+                </div>
+
+                <p class="descripcion">
+                    Lorem ipsum dolor sit amet, consectetuer adipisicing elit,
+                    sed do eiusmod tempor incididunt d minim veniam, quis
+                    nostrud exercitation ullamco.
+                </p>
+
+                <input class="nota-pedido" type="text" placeholder="Add a note (extra sauce, no onions, etc.)">
+
+                <div class="barra-carrito">
+                    <div class="selector-cantidad">
+                        <button onclick="cambiarCantidad(-1)">-</button>
+                        <span id="cantidad">2</span>
+                        <button onclick="cambiarCantidad(1)">+</button>
+                    </div>
+                    <button class="btn-agregar-carrito" onclick="location.href='carrito.html'">ADD TO CART</button>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <script>
+        let cantidad = 2;
+        function cambiarCantidad(valor){
+            cantidad = Math.max(1, cantidad + valor);
+            document.getElementById('cantidad').textContent = cantidad;
+        }
+    </script>
+</body>
+</html>

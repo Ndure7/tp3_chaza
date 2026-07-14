@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Restaurant - Carrito</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="container">
+
+        <header class="top-bar">
+            <a class="btn-cerrar" href="restaurante.html"><i class="fa-solid fa-xmark"></i></a>
+            <h2>Tu carrito</h2>
+        </header>
+
+        <main>
+            <p class="categoria-menu">MI PEDIDO</p>
+
+            <div class="lista-platos">
+                <div class="item-plato">
+                    <img src="./img/miga.jpg" alt="Oven Roasted Chicken Chopped Salad">
+                    <div class="info-plato">
+                        <h4>Sanguche de miga</h4>
+                        <p>Cantidad: 2</p>
+                    </div>
+                    <span class="precio-plato">$13.98</span>
+                </div>
+
+                <div class="item-plato">
+                    <img src="./img/fideos.jpg" alt="Diavolo piada">
+                    <div class="info-plato">
+                        <h4>Diavolo piada</h4>
+                        <p>Cantidad: 1</p>
+                    </div>
+                    <span class="precio-plato">$7.99</span>
+                </div>
+            </div>
+
+            <div class="resumen-carrito">
+                <div class="fila-resumen">
+                    <span>Subtotal</span>
+                    <span>$21.97</span>
+                </div>
+                <div class="fila-resumen">
+                    <span>Delivery</span>
+                    <span>$1.99</span>
+                </div>
+                <div class="fila-resumen total">
+                    <span>Total</span>
+                    <span>$23.96</span>
+                </div>
+            </div>
+
+            <div class="barra-carrito" style="padding: 0 1em 2em;">
+                <button class="btn-agregar-carrito" onclick="alert('¡Pedido confirmado!')">CONFIRMAR PEDIDO</button>
+            </div>
+        </main>
+
+        <footer class="tab-bar">
+            <a class="tab-item" href="restaurante.html">DETAILS</a>
+            <a class="tab-item" href="menu.html">MENU</a>
+            <a class="tab-item" href="reviews.html">REVIEWS</a>
+        </footer>
+    </section>
+</body>
+</html>
